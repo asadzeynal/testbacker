@@ -16,7 +16,7 @@ func NewCSVParser() *csvParser {
 	return &csvParser{}
 }
 
-func (p *csvParser) Parse(filePath string) error {
+func (p *csvParser) OpenFile(filePath string) error {
 	file, err := os.Open(filePath)
 	if err != nil {
 		return fmt.Errorf("could not open file: %w", err)
